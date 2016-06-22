@@ -1,0 +1,52 @@
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+figure#banner {
+	height: 200px;
+	display: block;
+}
+nav, footer {
+	height: 60px;
+}
+footer {
+  	clear: both;
+  	width: 100%;
+}
+
+/* ----- Colors ------ */
+nav {
+	background-color: lightgreen;
+}
+header, footer {
+	background-color: aliceblue;
+}
+section {
+	background-color: cadetblue;
+}
+
+/* ----- Media Queries ------ */
+@media (max-width: 768px) {
+ 	sidebar {
+  		display: hidden;
+ 	}
+ 	nav, section {
+		width: 100%;
+	}
+}
+@media (min-width: 768px) {
+ 	sidebar {
+		width: 20%;
+		float: left;
+ 	}
+  	content {
+  		width: 80%;
+  		float: left;
+ 	}
+}
+
+/* ------- Other tags ------ */
+code {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}

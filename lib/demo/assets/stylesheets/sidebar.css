@@ -1,0 +1,27 @@
+sidebar {
+	color: #e6f2ff;
+}
+sidebar a {
+	text-decoration: none;
+	background-clip: padding-box;
+	padding: 10px 10px;
+	background-color: #0073e6;
+	display: block;
+}
+sidebar li {
+	list-style-type: none;
+}
+sidebar a.selected {
+	background-color: #0059b3;
+}
+sidebar a:hover {
+	background-color: #0066cc;
+}
+
+/* ---------Removing webkit defaults--------- */
+sidebar ul {
+	-webkit-padding-start: inherit;
+}
+sidebar a:-webkit-any-link {
+	color: inherit;
+}

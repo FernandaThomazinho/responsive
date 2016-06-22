@@ -1,0 +1,14 @@
+figure#banner figcaption {
+	padding: 60px;
+	color: white;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: xx-large;
+}
+figure#banner {
+	background-image: url("../images/doctor-who-banner.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-clip: padding-box;
+}

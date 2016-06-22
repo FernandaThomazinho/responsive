@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive</title>
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/layout.css">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/banner.css">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/glyphicons.css">
+    <meta name="description" content="Exemplo de website Responsivo. Responsive website example.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<figure id="banner">
+		<figcaption>Vida, universo e tudo mais...</figcaption>
+	</figure>
+	<div class="main-container">
+		<sidebar>
+			<ul>
+				<li>
+					<a id="link1" href="#banner" class="selected" onclick="selectLink(1);">Link 1</a>
+				</li>
+				<li>
+					<a id="link2" href="#banner" onclick="selectLink(2);">Link 2</a>
+				</li>
+				<li>
+					<a id="link3" href="#banner" onclick="selectLink(3);">Link 3</a>
+				</li>
+			</ul>
+		</sidebar>
+		<content>
+			<nav>
+				Nav
+			</nav>
+			<section>
+				Section 1
+			</section>
+			<section>
+				Section 2
+			</section>	
+			<section>
+				Section 3
+			</section>	
+		</content>
+	</div>
+	<footer>
+		Footer
+	</footer>
+</body>
+<script type="text/javascript">
+	function selectLink(linkNumber) {
+		elem = document.querySelector("a#link" + linkNumber);
+		elem.class = "selected";
+		console.log(elem.class);
+	}
+</script>
+</html>
