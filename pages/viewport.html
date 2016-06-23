@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Um web site responsivo sobre responsividade.">
+	<meta name="author" content="">
+	<link rel="icon" href="../images/icon.png">
+	<link href="../vendor/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../vendor/bootstrap-3.3.6/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<title>Viewport</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Viewport</h1>
+				<p>A viewport ou saída de vídeo, em uma tradução livre, é a área de uma página web que é visível ao usuário. A saída de vídeo varia de acordo com o dispositivo e será menor em um mobile do que na tela de um computador.
+					Antes dos tablets e celulares, as páginas web eram projetadas somente para as telas dos computadores e era comum que tivessem um design estático e tamanhos fixos.
+					Então, quando começamos a navegar na internet utilizando dispositivos móveis, tamanhos fixos se tornaram grandes demais para as viewports. Para corrigir isso, os navegadores nestes dispositivos diminuíram proporcionalmente todos os elementos da página para caber na saída de vídeo.</br>
+					Não foi a solução perfeita, mas uma correção rápida.
+				</p>
+			</div> <!-- col-sm-12 -->
+		</div> <!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Atribuindo a Viewport</h2>
+				<p> HTML 5 introduziu uma maneira de permitir que os web designers controlassem a viewport
+				    através da tag <code>meta</code>. Você deve incluir a seguinte tag <code>meta</code> viewport em todas as suas páginas:</br>
+					<code class="language-html" data-lang="html">
+						<span class="nt">&lt;meta</span>
+						<span class="na">name=</span>
+						<span class="s">"viewport"</span>
+						<span class="na">content=</span>
+						<span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>
+						<span class="nt">&gt;</span>
+					</code>
+				</p>
+			</div> <!-- col-sm-12 -->
+		</div> <!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<p> Um elemento meta tag viewport dá instruções ao navegador sobre como controlar 
+				    as dimensões da página mantendo a proporção.
+					A propriedade <code>width=device-width</code> atribui para a largura da página o comportamento de se adaptar a largura do dispositivo.
+					A propriedade <code>initial-scale=1.0</code> atribui o nível de zoom com o qual a página será carregada no navegador.
+					Aqui um exemplo de página sem a meta tag viewport e a mesma página com a meta tag viewport:
+					<ul>
+						<li><a href="http://www.w3schools.com/css/example_withviewport.htm">Com viewport</a></li>
+						<li><a href=”http://www.w3schools.com/css/example_withoutviewport.htm”>Sem viewport</a></li>
+					</ul>
+				</p>
+			</div> <!-- col-sm-12 -->
+		</div> <!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<p> Usuários geralmente usam barras de rolagem em páginas web, seja em desktops ou
+				    em dispositivos móveis, na vertical, mas nunca horizontalmente.
+					Então, se o usuário for forçado a usar a barra de rolagem horizontal, ou diminuir o zoom, para visualizar todo o conteúdo da página isso resultará em uma experiência de uso ruim.
+					Algumas outras regras a seguir:
+					<ol>
+						<li>
+							NUNCA atribua valores fixos na largura dos elementos – Por exemplo, se uma imagem for exibida em uma largura maior que a largura da saída de vídeo isso fará com que a tela fique com barra de rolagem horizontal. Lembre-se de ajustar esse conteúdo para caber na largura da saída de vídeo.
+						</li>
+						<li>
+							NUNCA dependa de um tamanho de saída de vídeo específico para apresentar bem um conteúdo – Como as dimensões da tela e a largura do vídeo variam muito entre os dispositivos, o conteúdo não deve depender de uma largura de tela específica para ser bem apresentado.
+						</li>
+						<li>
+							UTILIZE CSS Media Queries para aplicar diferentes estilos para telas pequenas e grandes – Atribuir grandes larguras absolutas para os elementos da tela irá fazer com que eles sejam muito largos para a saída de vídeo de um dispositivo menor. Ao invés disto, considere utilizar larguras relativas, assim como <code> width: 100%.</code>. Cuidado também ao usar posicionamento absoluto com valores muito altos, ou seja, fixar um elemento muito distante da borda esquerda da página. Isso pode fazer com que ele fique para fora em telas menores.
+						</li>
+					</ol>
+				</p>
+			</div> <!-- col-sm-12 -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+</body>
+</html>
