@@ -9,14 +9,15 @@
 	<link rel="icon" href="../images/icon.png">
 	<link href="../vendor/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../vendor/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/application.css" rel="stylesheet">
 	<title>Media Query</title>
 </head>
 <body>
 	<div class="container">
 		<h1>Media Query</h1>
-		Media query é uma técnica do CSS que foi introduzida no CSS3.
-		Esta técnica utiliza a regra @media para incluir um bloco de propriedades CSS somente se uma certa condição for verdadeira.
-		Por exemplo, se queremos que uma certa regra valha apenas para janelas de navegadores com menos de 500 pixels de largura.
+		<p class="text-justify">
+			Media query é uma técnica do CSS que foi introduzida no CSS3. Esta técnica utiliza a regra @media para incluir um bloco de propriedades CSS somente se uma certa condição for verdadeira. Por exemplo, se queremos que uma certa regra valha apenas para janelas de navegadores com menos de 500 pixels de largura.
+		</p>
 		<code>
 		@media only screen and (max-width: 500px) {
 		    body {
@@ -24,18 +25,63 @@
 		    }
 		}
 		</code>
-
-		Para uma variação intermediária da largura da tela, como a que acontece com as larguras dos monitores de diferentes modelos de notebooks, utilizar um sistema de grid já costuma ser o suficiente para adequar a apresentação do conteúdo. Mas quando a diferença é muito grande, como a que existe entre a largura de um notebook e a de um dispositivo móvel, faz-se necessário criar um ponto de ruptura, para que, certas partes do design, comportem-se de maneiras diferentes em cada lado desse ponto. A melhor forma de entender esses diferentes comportamentos é observando a mudança.
-
+		<p class="text-justify">
+			Para uma variação intermediária da largura da tela, como a que acontece com as larguras dos monitores de diferentes modelos de notebooks, utilizar um sistema de grid já costuma ser o suficiente para adequar a apresentação do conteúdo. Mas quando a diferença é muito grande, como a que existe entre a largura de um notebook e a de um dispositivo móvel, faz-se necessário criar um ponto de ruptura, para que, certas partes do design, comportem-se de maneiras diferentes em cada lado desse ponto. A melhor forma de entender esses diferentes comportamentos é observando a mudança.
+		</p>
 	  <!-- DEMONSTRATION -->
 	
 	  <div class="resizable"> <!-- RESIZABLE -->
 		<iframe id="demo" src="../lib/demo/views/modelo.html"></iframe>
 	  </div><!-- RESIZABLE -->
-	  <p>Você pode acrescentar quantos pontos de quebra quiser. Usando bootstrap você poderá criar uma variação sutil com até quatro tamanhos diferentes de tela.</p>
-	  <p>Para saber mais sobre o sistema de grid do bootstrap visite <a href="http://getbootstrap.com/css/#grid">Bootstrap grid</a></p>
+	  
+	  <p class="text-justify">
+	  	Você pode acrescentar quantos pontos de quebra quiser. Usando bootstrap você poderá criar uma variação sutil com até quatro tamanhos diferentes de tela.</p>
+	  <p class="text-justify">
+	  	Para saber mais sobre o sistema de grid do bootstrap visite
+	  	<a href="http://getbootstrap.com/css/#grid">Bootstrap grid</a>
+	  </p>
 	</div> <!-- container -->
 </body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="vendor/bootstrap-3.3.6/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="vendor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	
+	<!-- JQuery UI
+    ================================================== -->
+	<link href="vendor/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+	<script src="vendor/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+	<!-- Custom Scripts
+    ================================================== -->
+	<script type="text/javascript">
+	$(function() {
+		$(".resizable").resizable({
+		    start: function(event, ui) {
+		        ui.element.append($("<div/>", {
+		            id: "iframe-barrier",
+		            css: {
+		                position: "absolute",
+		                top: 0,
+		                right: 0,
+		                bottom: 0,
+		                left: 0,
+		                "z-index": 10
+		        }
+		        }));
+		    },
+		    stop: function(event, ui) {
+		        $("#iframe-barrier", ui.element).remove();
+		    },
+		    resize: function(event, ui) {
+		        $("iframe", ui.element).width(ui.size.width).height(ui.size.height);
+		    }
+		});
+	});
+	</script>
 </html>
 
 
